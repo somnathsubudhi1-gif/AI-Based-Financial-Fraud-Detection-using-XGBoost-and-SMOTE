@@ -28,10 +28,9 @@ This project focuses on developing a machine learning-based system to detect fin
 2. Ensure you have `Fraud.csv` dataset in your working directory.
 3. Run the Jupyter notebook or Python script for training and evaluation.
 4. The trained XGBoost model will be saved as `xgb_model.pkl`.
-5. To test real-time prediction, run `app.py` with Streamlit:
-   ```bash
-   streamlit run app.py
-   ```
+
+   
+   
 
 ---
 

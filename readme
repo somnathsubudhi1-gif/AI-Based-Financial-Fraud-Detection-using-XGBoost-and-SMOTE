@@ -4,23 +4,21 @@ Name: Somanath Subudhi
 Student ID: 1137253  
 Course: AI - Week 17 Final Assignment  
 
----
+
 
   Project Title and Description
 
 This project focuses on developing a machine learning-based system to detect financial fraud in online transactions. The core objective is to improve fraud recall and reduce false negatives by using class-balancing techniques and advanced classifiers like XGBoost and LightGBM. The model is based on the original code by Arunava Kumar Chakraborty and is significantly enhanced through multiple upgrades.
 
----
-
  Environment Setup and Requirements
 
 - Python 3.8 or higher
 - Required Libraries:
-  ```bash
+  bash
   pip install pandas numpy scikit-learn xgboost lightgbm imbalanced-learn matplotlib seaborn streamlit joblib
-  ```
+  
 
----
+
 
  Instructions to Reproduce Results
 
@@ -29,40 +27,35 @@ This project focuses on developing a machine learning-based system to detect fin
 3. Run the Jupyter notebook or Python script for training and evaluation.
 4. The trained XGBoost model will be saved as `xgb_model.pkl`.
 
-   
-   
+Steps to Train Your Own Model
 
----
-
- Steps to Train Your Own Model
-
-1. **Data Preprocessing**  
+1. Data Preprocessing
    - Handled missing values and outliers.
    - Addressed multicollinearity.
 
-2. **Feature Engineering**  
+2. Feature Engineering
    - Created new features: `balanceDiffPercent`, `isNightTransaction`, `transactionCount`
 
-3. **Class Balancing**  
+3. Class Balancing
    - Applied SMOTE to resolve data imbalance.
 
-4. **Model Training**  
+4. Model Training  
    - Trained XGBoost and LightGBM classifiers.
 
-5. **Evaluation**  
+5. Evaluation  
    - Used classification report and confusion matrix.
 
 ---
 
-##  Results Summary
+ Results Summary
 
-### Logistic Regression (Before Upgrade)
+ Logistic Regression (Before Upgrade)
 - Fraud Recall: 0.37
 - F1-score (Fraud): 0.51
 - Accuracy: ~100% (due to imbalance)
 
  XGBoost (After Upgrade)
-```
+
                precision    recall  f1-score   support
 
  Not Fraud       1.00      0.91      0.95   1270871
@@ -70,37 +63,35 @@ Fraud            0.01      0.89      0.03      1650
 Accuracy                             0.91   1272521
 Macro avg        0.51      0.90      0.49   1272521
 Weighted avg     1.00      0.91      0.95   1272521
-```
+
 >  Fraud recall improved significantly after applying SMOTE and advanced models.
 
----
+
 
  Notes or Limitations
 
 - Precision for fraud class is low due to aggressive fraud flagging.
 - More features and time-based patterns can improve results further.
 
----
+
 
   Project Structure
 
-```
+
 Financial-Fraud-Detection/
 ├── Fraud.csv                     # Dataset
 ├── xgb_model.pkl                 # Trained XGBoost model
-├── app.py                        # Streamlit dashboard (optional)
 ├── Financial Fraud Detection.ipynb  # Full notebook
 ├── README.md                     # Project documentation
-```
 
----
 
-##  References
+
+  References
 
 [1] Arunava Kumar Chakraborty, GitHub Repository: Financial-Payment-Services-Fraud-Detection  
 [2] Sharif, M.H.U., & Mohammed, M.A. (2022). "A literature review of financial losses statistics for cyber security and future trend", IEEE Access, 15, 138-156.  
 [3] Panigrahi, S., Kundu, A., Sural, S., & Majumdar, A.K. (2009). "Credit card fraud detection: A fusion approach using Dempster–Shafer theory and Bayesian learning", Information Fusion, 10(4), 354–363.
 
----
 
- _Prepared by Somanath Subudhi for AI Final Assignment_
+
+ Prepared by Somanath Subudhi for AI Final Assignment
